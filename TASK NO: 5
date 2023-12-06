@@ -1,0 +1,26 @@
+#include <iostream> 
+using namespace std;
+int larger(int d1, int d2) {
+    if (d1 > d2) {
+        return d1;
+    }
+    else {
+        return d2;
+    }
+}
+
+int main() {
+    int input1, input2;
+
+    cout << "Enter the first Distance: ";
+    cin >> input1;
+
+    cout << "Enter the second Distance: ";
+    cin >> input2;
+
+    int largest = larger(input1, input2);
+
+    cout << "The larger Distance is: " << largest << endl;
+
+    return 0;
+}
