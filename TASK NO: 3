@@ -1,0 +1,35 @@
+#include <iostream> 
+using namespace std;
+char input;
+int in()
+{
+	cout << "ENTER AN ALPHABET :" << endl;
+	cin >> input;
+	return input;
+	
+}
+void convert()
+ 
+{
+
+	if (islower(input))
+	{
+		cout << "RESULT" << endl;
+		char b = int(input) - 32;
+		cout << b << endl;
+	}
+	else if (isupper(input))
+	{
+		cout << "RESULT" << endl;
+		char b = int(input) + 32;
+		cout << b << endl;
+	}
+}
+int main()
+{
+
+	in();
+	convert();
+	return 0;
+}
+
