@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+float calculateCharges(float HoursParked) {
+    float Charge = 2.00;
+    if (HoursParked > 3.0) {
+        Charge += 0.50 * (HoursParked - 3.0);
+    }
+    if (Charge > 10.00) {
+        Charge = 10.00;
+    }
+    return Charge;
+}
+
+int main() {
+    float HoursParked1;
+    float HoursParked2;
+    float HoursParked3;
+    float Charges1;
+    float Charges2;
+    float Charges3;
+    float totalCharges = 0.00;
+
+    cout << "Enter the hours parked for customer 1: ";
+    cin >> HoursParked1;
+
+    cout << "Enter the hours parked for customer 2: ";
+    cin >> HoursParked2;
+
+    cout << "Enter the hours parked for customer 3: ";
+    cin >> HoursParked3;
+
+    Charges1 = calculateCharges(HoursParked1);
+    Charges2 = calculateCharges(HoursParked2);
+    Charges3 = calculateCharges(HoursParked3);
+
+    totalCharges += Charges1;
+    totalCharges += Charges2;
+    totalCharges += Charges3;
+
+    cout << endl << "Car" << "\t\t\t" << "Hours" << "\t" << "Charges" << endl;
+    cout << "-------" << "\t\t\t" << "-----" << "\t" << "-------" << endl;
+    cout << "1" << "\t\t\t" << hoursParked1 << "\t" << Charges1 << endl;
+    cout << "2" << "\t\t\t" << hoursParked2 << "\t" << Charges2 << endl;
+    cout << "3" << "\t\t\t" << hoursParked3 << "\t" << Charges3 << endl;
+    cout << endl << "Total" << "\t\t\t" << totalCharges << endl;
+
+    return 0;
+}
+
