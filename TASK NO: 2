@@ -1,0 +1,22 @@
+
+#include <iostream>
+using namespace std;
+int Power(int n, int p);
+int main() {
+	int n, p;
+	cout << "ENTER THE BASE: ";
+	cin >> n;
+	cout << "ENTER THE EXPONENT: ";
+	cin >> p;
+	int result = Power(n, p);
+	cout << "RESULT IS: " << result;
+	return 0;
+}
+int Power(int n, int p) {
+	int result = 1;
+	for (int i = 1; i <= p; i++) {
+		result = n * result;
+
+	}
+	return result;
+}
